@@ -1,0 +1,15 @@
+{% load static %}
+<html>
+    <head>
+        {% if title %}
+            <title>Web Blog - {{ title }}</title>
+        {% else %}
+            <title>Web Blog</title>
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/base.css' %}">
+    </head>
+    <body>
+        {% block content %}{% endblock content %}
+        <script type="text/javascript" src="{% static 'blog/js/base.js' %}"></script>
+    </body>
+</html>
