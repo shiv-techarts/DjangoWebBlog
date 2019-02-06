@@ -497,3 +497,9 @@ form .form-control {
 .navbar-toggler {
     margin-top: 15px;
 }
+
+.post-content {
+    width: 500px;
+    height: 500px;
+    text-align: justify;
+}
