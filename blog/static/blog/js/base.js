@@ -26,7 +26,7 @@ $(function () {
         autoplay: true,
         autoplayHoverPause: true,
         smartSpeed: 700,
-        loop: false,
+        loop: true,
         responsive: {
             0: {
                 items: 1,

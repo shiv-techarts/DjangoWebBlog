@@ -16,15 +16,16 @@
                                         {{ post.content }}
                                     </div>
                                     <div class="team-member-info text-center">
-                                        <h4 class="team-member-name">{{ post.name }}</h4>
-                                        <h4 class="team-member-desg">{{ post.topic }}</h4>
+                                        <h4 class="team-member-name">{{ post.author }}</h4>
+                                        <h4 class="team-member-desg">{{ post.title }}</h4>
+                                        <p class="team-member-desg">{{ post.date_posted | date:"F d, Y" }}</p>
                                         <ul class="social-list">
                                             <li><a href="{{ post.fb_link }}" class="social-icon icon-gray"><i
                                                     class="fab fa-facebook-f"></i></a>
                                             </li>
                                             <li><a href="{{ post.twitter_link }}" class="social-icon icon-gray"><i class="fab fa-twitter"></i></a>
                                             </li>
-                                            <li><a href="{{ post.google_plus_link }}" class="social-icon icon-gray"><i
+                                            <li><a href="{{ post.gplus_link }}" class="social-icon icon-gray"><i
                                                     class="fab fa-google-plus-g"></i></a></li>
                                         </ul>
                                     </div>
