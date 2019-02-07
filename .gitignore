@@ -26,6 +26,11 @@ media
 .idea/**/libraries
 *.iws /out/
 
+# Migrations
+
+**/migrations
+**/migrations/*
+
 # Python #
 *.py[cod]
 *$py.class

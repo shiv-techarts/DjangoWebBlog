@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Team Section -->
+    <section id="team">
+        <div class="content-box">
+            <div style="height: 50px">
+            </div>
+            <div class="container-fluid">
+                <div class="row wow animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                    <div class="col-xl-12">
+                        <div id="team-members" class="owl-carousel owl-theme">
+                            {% for post in posts %}
+                                <div class="team-member">
+                                    <div class="post-content">
+                                        {{ post.content }}
+                                    </div>
+                                    <div class="team-member-info text-center">
+                                        <h4 class="team-member-name">{{ post.author }}</h4>
+                                        <h4 class="team-member-desg">{{ post.title }}</h4>
+                                        <p class="team-member-desg">{{ post.date_posted | date:"F d, Y" }}</p>
+                                        <ul class="social-list">
+                                            <li><a href="{{ post.fb_link }}" class="social-icon icon-gray"><i
+                                                    class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li><a href="{{ post.twitter_link }}" class="social-icon icon-gray"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li><a href="{{ post.gplus_link }}" class="social-icon icon-gray"><i
+                                                    class="fab fa-google-plus-g"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

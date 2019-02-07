@@ -1,0 +1,157 @@
+/*
+     Adding Responsive CSS for Large / Medium / Small Devices
+ */
+
+/* For Large devices */
+@media (min-width: 1200px) {
+    /* No Changes Required */
+}
+
+/* For Medium devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* No Changes Required */
+}
+
+/* For Small devices */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .client i {
+        font-size: 100px;
+    }
+
+    #about-bg-diagonal {
+        width: 100%;
+        height: 300px;
+        border: 0;
+        float: none;
+    }
+
+    #about-content-box {
+        width: 100%;
+        height: 350px;
+    }
+
+    #footer-menu {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    #footer-menu a {
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    #footer-copyrights {
+        text-align: center;
+    }
+}
+
+/* For Extra Small devices */
+@media (max-width: 767px) {
+
+    #home-heading h3 {
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+    .btn-general {
+        padding: 6px 13px 6px 13px;
+        font-size: 20px;
+    }
+
+    #about-bg-diagonal {
+        width: 100%;
+        height: 300px;
+        border: 0;
+        float: none;
+    }
+
+    #about-content-box {
+        width: 100%;
+        height: 350px;
+    }
+
+    .client i {
+        font-size: 70px;
+    }
+
+    #footer-menu {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .img-wrapper img {
+        min-width: 100%;
+    }
+
+    #techarts-wrapper {
+        padding: 0 24px;
+    }
+
+    #footer-copyrights {
+        text-align: center;
+    }
+
+}
+
+/* For Extra Small devices */
+@media (max-width: 480px) {
+
+    #techarts-wrapper {
+        padding: 0;
+    }
+
+    .img-wrapper img {
+        min-width: 100%;
+        max-height: 250px;
+    }
+
+    .service-item {
+        text-align: center;
+    }
+
+    .service-item-icon i {
+        float: none;
+    }
+
+    .service-item-desc p {
+        margin: 0;
+        padding-left: 0;
+    }
+
+    #footer-copyrights {
+        text-align: center;
+    }
+}
+
+/* For Extra Small devices */
+@media (max-width: 320px) {
+
+    #techarts-wrapper {
+        padding: 0;
+    }
+
+    .img-wrapper img {
+        min-width: 100%;
+        max-height: 250px;
+    }
+
+    .service-item {
+        text-align: center;
+    }
+
+    .service-item-icon i {
+        float: none;
+    }
+
+    .service-item-desc p {
+        margin: 0;
+        padding-left: 0;
+    }
+
+
+    #footer-copyrights {
+        text-align: center;
+    }
+}
