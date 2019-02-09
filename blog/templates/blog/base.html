@@ -57,7 +57,7 @@
     <nav id="techarts-nav" class="navbar navbar-expand-lg navbar-dark techarts-dark fixed-top">
         <div id="techarts-wrapper" class="container-fluid">
             <div id="techarts-nav-brand">
-                <a class="navbar-brand smooth-scroll" href="#home"><span id="techarts-logo-sym">tech arts</span></a>
+                <a class="navbar-brand smooth-scroll" href="{% url 'blog-home' %}"><span id="techarts-logo-sym">tech arts</span></a>
             </div>
             <div id="techarts-nav-menu" class="text-right">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
@@ -66,10 +66,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a href="#home" class="nav-link smooth-scroll">Home</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link smooth-scroll">About</a></li>
-                        <li class="nav-item"><a href="#work" class="nav-link smooth-scroll">Login</a></li>
-                        <li class="nav-item"><a href="#team" class="nav-link smooth-scroll">Register</a></li>
+                        <li class="nav-item"><a href="{% url 'blog-home' %}" class="nav-link smooth-scroll">Home</a></li>
+                        <li class="nav-item"><a href="{% url 'blog-about' %}" class="nav-link smooth-scroll">About</a></li>
+                        {% if user.is_authenticated %}
+                            <li class="nav-item"><a href="{% url 'profile' %}" class="nav-link smooth-scroll">Profile</a></li>
+                            <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link smooth-scroll">Logout</a></li>
+                        {% else %}
+                            <li class="nav-item"><a href="{% url 'login' %}" class="nav-link smooth-scroll">Login</a></li>
+                            <li class="nav-item"><a href="{% url 'register' %}" class="nav-link smooth-scroll">Register</a></li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -77,6 +82,11 @@
     </nav>
 </header>
 
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
 {% block content %}{% endblock content %}
 
 <!-- JQuery -->
