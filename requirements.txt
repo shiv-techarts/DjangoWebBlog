@@ -1,2 +1,5 @@
-Django==2.1.5
+Django==2.2a1
+django-crispy-forms==1.7.2
 pytz==2018.9
+pywatchman==1.4.1
+sqlparse==0.2.4
