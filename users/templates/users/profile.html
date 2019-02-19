@@ -2,5 +2,7 @@
 {% block content %}
     <div style="margin-top: 200px; text-align: center">
         {{ user.username }}
+        {{ user.email }}
+        <img src="{{ user.profile.image.url }}">
     </div>
 {% endblock content %}
